@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://generadorObstaculos/generadorObstaculos.gd" type="Script" id=1]
+[ext_resource path="res://Obstaculos/patrones/PatronObstaculos1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Obstaculos/patrones/patronObstaculos2.tscn" type="PackedScene" id=3]
+
+[node name="GeneradorObstaculos" type="Node"]
+script = ExtResource( 1 )
+patron1 = ExtResource( 2 )
+patron2 = ExtResource( 3 )
+velocidad = 300

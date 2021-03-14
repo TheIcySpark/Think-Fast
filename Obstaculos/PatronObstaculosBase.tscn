@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Obstaculos/obstaculos_movimiento.gd" type="Script" id=1]
+
+[node name="PatronesBase" type="Node2D"]
+position = Vector2( 1056, 0 )
+script = ExtResource( 1 )
+
+[node name="Paredes" type="Node2D" parent="."]
+
+[node name="posicionSiguiente" type="Position2D" parent="."]
+__meta__ = {
+"_gizmo_extents_": 0.0
+}
