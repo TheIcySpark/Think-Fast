@@ -16,12 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Think Fast"
+run/main_scene="res://juego/Juego.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/stretch/mode="viewport"
-window/stretch/aspect="keep"
+window/stretch/aspect="keep_height"
 
 [input]
 

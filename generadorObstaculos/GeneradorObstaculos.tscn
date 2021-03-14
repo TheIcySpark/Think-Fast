@@ -8,4 +8,4 @@
 script = ExtResource( 1 )
 patron1 = ExtResource( 2 )
 patron2 = ExtResource( 3 )
-velocidad = 300
+velocidad = 250

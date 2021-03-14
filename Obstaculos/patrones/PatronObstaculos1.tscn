@@ -105,4 +105,4 @@ position = Vector2( 912, 528 )
 position = Vector2( 912, 240 )
 
 [node name="posicionSiguiente" parent="." index="1"]
-position = Vector2( 1344, 0 )
+position = Vector2( 1440, 0 )
