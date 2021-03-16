@@ -24,6 +24,7 @@ func desactivar_patron_obstaculos() -> void:
 	patrones[patron_activo_a].velocidad = 0
 	patron_activo_a = patron_activo_b
 	patron_activo_b = -1
+	velocidad += 10
 
 
 func activar_patron_obstaculos(indice: int) -> void:

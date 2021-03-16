@@ -2,7 +2,7 @@
 
 [ext_resource path="res://recursosExternos/IniyaDisplay.otf" type="DynamicFontData" id=1]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 44
 outline_size = 1
 outline_color = Color( 0.0117647, 0.447059, 0.596078, 1 )
@@ -11,4 +11,4 @@ use_filter = true
 font_data = ExtResource( 1 )
 
 [resource]
-default_font = SubResource( 2 )
+default_font = SubResource( 1 )
