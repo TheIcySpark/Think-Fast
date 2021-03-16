@@ -19,3 +19,8 @@ func obtener_input() -> Vector2:
 		direccion += Vector2.LEFT
 	direccion = direccion.normalized()
 	return direccion
+
+
+func _on_Visibilidad_screen_exited() -> void:
+	$GameOver/UI.visible = true
+	get_tree().paused = true

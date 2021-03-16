@@ -89,20 +89,41 @@ position = Vector2( 720, 240 )
 [node name="Pared14" parent="Paredes" index="27" instance=ExtResource( 2 )]
 position = Vector2( 144, 528 )
 
-[node name="Pared15" parent="Paredes" index="28" instance=ExtResource( 2 )]
+[node name="Pared34" parent="Paredes" index="28" instance=ExtResource( 2 )]
+position = Vector2( 144, 624 )
+
+[node name="Pared35" parent="Paredes" index="29" instance=ExtResource( 2 )]
+position = Vector2( 144, 720 )
+
+[node name="Pared36" parent="Paredes" index="30" instance=ExtResource( 2 )]
+position = Vector2( 336, 720 )
+
+[node name="Pared37" parent="Paredes" index="31" instance=ExtResource( 2 )]
+position = Vector2( 528, 624 )
+
+[node name="Pared38" parent="Paredes" index="32" instance=ExtResource( 2 )]
+position = Vector2( 720, 720 )
+
+[node name="Pared40" parent="Paredes" index="33" instance=ExtResource( 2 )]
+position = Vector2( 1200, 624 )
+
+[node name="Pared39" parent="Paredes" index="34" instance=ExtResource( 2 )]
+position = Vector2( 912, 624 )
+
+[node name="Pared15" parent="Paredes" index="35" instance=ExtResource( 2 )]
 position = Vector2( 336, 528 )
 
-[node name="Pared16" parent="Paredes" index="29" instance=ExtResource( 2 )]
+[node name="Pared16" parent="Paredes" index="36" instance=ExtResource( 2 )]
 position = Vector2( 528, 528 )
 
-[node name="Pared17" parent="Paredes" index="30" instance=ExtResource( 2 )]
+[node name="Pared17" parent="Paredes" index="37" instance=ExtResource( 2 )]
 position = Vector2( 720, 528 )
 
-[node name="Pared18" parent="Paredes" index="31" instance=ExtResource( 2 )]
+[node name="Pared18" parent="Paredes" index="38" instance=ExtResource( 2 )]
 position = Vector2( 912, 528 )
 
-[node name="Pared19" parent="Paredes" index="32" instance=ExtResource( 2 )]
+[node name="Pared19" parent="Paredes" index="39" instance=ExtResource( 2 )]
 position = Vector2( 912, 240 )
 
 [node name="posicionSiguiente" parent="." index="1"]
-position = Vector2( 1440, 0 )
+position = Vector2( 1536, 0 )
