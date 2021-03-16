@@ -7,7 +7,6 @@ extents = Vector2( 48, 48 )
 
 [node name="Pared" type="KinematicBody2D"]
 collision_layer = 2
-collision/safe_margin = 10.0
 __meta__ = {
 "_edit_group_": true
 }

@@ -5,8 +5,8 @@
 [ext_resource path="res://gameOver/GameOver.tscn" type="PackedScene" id=3]
 
 [sub_resource type="PhysicsMaterial" id=1]
-friction = 0.0
-bounce = 0.1
+friction = 0.75
+bounce = 1.0
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 39.0128
@@ -17,7 +17,6 @@ blend_mode = 1
 [node name="Jugador" type="RigidBody2D"]
 collision_mask = 2
 mode = 2
-mass = 0.01
 physics_material_override = SubResource( 1 )
 gravity_scale = 0.0
 script = ExtResource( 2 )
@@ -27,7 +26,6 @@ __meta__ = {
 velocidad = 650.0
 
 [node name="Colision" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

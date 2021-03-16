@@ -1,6 +1,7 @@
 extends Node
 export var patron1: PackedScene
 export var patron2: PackedScene
+export var patron3: PackedScene
 export var velocidad: int
 
 var patrones: Array
@@ -48,6 +49,8 @@ func instanciar_escenas() -> void:
 	patrones.append(patron1.instance())
 	add_child(patrones.back())
 	patrones.append(patron2.instance())
+	add_child(patrones.back())
+	patrones.append(patron3.instance())
 	add_child(patrones.back())
 
 
