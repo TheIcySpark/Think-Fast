@@ -15,3 +15,8 @@ patron3 = ExtResource( 4 )
 patron4 = ExtResource( 5 )
 patron5 = ExtResource( 6 )
 velocidad = 250
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

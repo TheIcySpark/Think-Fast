@@ -6,6 +6,7 @@ export var patron4: PackedScene
 export var patron5: PackedScene
 export var velocidad: int
 
+
 var patrones: Array
 var patron_activo_a: int = -1
 var patron_activo_b: int = -1
@@ -27,8 +28,6 @@ func desactivar_patron_obstaculos() -> void:
 	patrones[patron_activo_a].velocidad = 0
 	patron_activo_a = patron_activo_b
 	patron_activo_b = -1
-	velocidad += 10
-	patrones[patron_activo_a].velocidad = velocidad
 
 
 func activar_patron_obstaculos(indice: int) -> void:
@@ -61,3 +60,9 @@ func instanciar_escenas() -> void:
 	add_child(patrones.back())
 
 
+func _on_Timer_timeout() -> void:
+	velocidad += 1
+	if patron_activo_a != -1:
+		patrones[patron_activo_a].velocidad = velocidad
+	if patron_activo_b != -1:
+		patrones[patron_activo_b].velocidad = velocidad
