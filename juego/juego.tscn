@@ -3,3 +3,5 @@
 [ext_resource path="res://juego/JuegoBase.tscn" type="PackedScene" id=1]
 
 [node name="Juego" instance=ExtResource( 1 )]
+
+[editable path="Jugador"]

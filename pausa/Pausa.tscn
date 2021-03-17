@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://recursosInternos/Themes/letra.tres" type="Theme" id=1]
+[ext_resource path="res://pausa/Pausa.gd" type="Script" id=2]
+
+[node name="Pausa" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contenedor" type="VBoxContainer" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -140.0
+margin_top = -130.5
+margin_right = 140.0
+margin_bottom = 130.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Continuar" type="Button" parent="Control/Contenedor"]
+margin_right = 280.0
+margin_bottom = 49.0
+text = "Continue"
+
+[node name="Reinicar" type="Button" parent="Control/Contenedor"]
+margin_top = 53.0
+margin_right = 280.0
+margin_bottom = 102.0
+text = "Restart"
+
+[node name="Opciones" type="Button" parent="Control/Contenedor"]
+margin_top = 106.0
+margin_right = 280.0
+margin_bottom = 155.0
+text = "Settings"
+
+[node name="Menu" type="Button" parent="Control/Contenedor"]
+margin_top = 159.0
+margin_right = 280.0
+margin_bottom = 208.0
+text = "Back to menu"
+
+[node name="Salir" type="Button" parent="Control/Contenedor"]
+margin_top = 212.0
+margin_right = 280.0
+margin_bottom = 261.0
+text = "Quit Game"
+[connection signal="button_down" from="Control/Contenedor/Continuar" to="." method="_on_Continuar_button_down"]
+[connection signal="button_down" from="Control/Contenedor/Reinicar" to="." method="_on_Reinicar_button_down"]
+[connection signal="button_down" from="Control/Contenedor/Opciones" to="." method="_on_Opciones_button_down"]
+[connection signal="button_down" from="Control/Contenedor/Menu" to="." method="_on_Menu_button_down"]
+[connection signal="button_down" from="Control/Contenedor/Salir" to="." method="_on_Salir_button_down"]

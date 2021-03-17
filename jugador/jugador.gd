@@ -3,11 +3,11 @@ extends RigidBody2D
 export var velocidad: float
 
 func _physics_process(delta: float) -> void:
-	var direccion: Vector2 = obtener_input()
+	var direccion: Vector2 = obtener_direccion()
 	set_linear_velocity(direccion * velocidad)
 
 
-func obtener_input() -> Vector2:
+func obtener_direccion() -> Vector2:
 	var direccion: Vector2 = Vector2.ZERO
 	if Input.is_action_pressed("ui_arriba"):
 		direccion += Vector2.UP

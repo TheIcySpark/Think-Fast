@@ -150,7 +150,7 @@ position = Vector2( 1632, 624 )
 position = Vector2( 1344, 336 )
 
 [node name="Pared51" parent="Paredes" index="48" instance=ExtResource( 2 )]
-position = Vector2( 1728, 768 )
+position = Vector2( 1824, 624 )
 
 [node name="Pared52" parent="Paredes" index="49" instance=ExtResource( 2 )]
 position = Vector2( 1440, 624 )
