@@ -12,8 +12,8 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	var direccion: Vector2 = obtener_direccion()
-	if(direccion == Vector2.LEFT):
-		set_position(Vector2(position.x - velocidad_obstaculos * delta, position.y))
+	set_position(Vector2(position.x + (velocidad_obstaculos * delta * direccion.x),
+			position.y + (velocidad_obstaculos * delta * direccion.y)))
 	move_and_slide(direccion * velocidad)
 
 
