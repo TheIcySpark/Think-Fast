@@ -1,11 +1,25 @@
-extends RigidBody2D
+extends KinematicBody2D
 
+export var generador_obstaculos: NodePath
 export var velocidad: float
+
+var velocidad_obstaculos = 0
+
+
+func _process(delta: float) -> void:
+	obtener_velocidad_obstaculos()
+
 
 func _physics_process(delta: float) -> void:
 	var direccion: Vector2 = obtener_direccion()
-	set_linear_velocity(direccion * velocidad)
+	if(direccion == Vector2.LEFT):
+		set_position(Vector2(position.x - velocidad_obstaculos * delta, position.y))
+	move_and_slide(direccion * velocidad)
 
+
+func obtener_velocidad_obstaculos():
+	if generador_obstaculos != "":
+		velocidad_obstaculos = get_node(generador_obstaculos).velocidad
 
 func obtener_direccion() -> Vector2:
 	var direccion: Vector2 = Vector2.ZERO
