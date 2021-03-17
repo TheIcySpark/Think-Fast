@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/YV-Lune-NCS-Release.ogg-9deebf3aeb8b91e55f718e524276ed79.oggstr"
+
+[deps]
+
+source_file="res://musica/YV-Lune-NCS-Release.ogg"
+dest_files=[ "res://.import/YV-Lune-NCS-Release.ogg-9deebf3aeb8b91e55f718e524276ed79.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

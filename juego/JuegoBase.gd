@@ -12,6 +12,7 @@ func finalizar_juego() -> void:
 	$Jugador/GameOver/UI.visible = true
 	$Camara/Animacion.play("sacudirCamara")
 	estadisticas.guardar_estadisticas()
+	$SonidosFondo.play()
 	get_tree().set_pause(true)
 
 

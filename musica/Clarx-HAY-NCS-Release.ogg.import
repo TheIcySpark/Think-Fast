@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Clarx-HAY-NCS-Release.ogg-6953d6948ec8ed3372afe9ded85642db.oggstr"
+
+[deps]
+
+source_file="res://musica/Clarx-HAY-NCS-Release.ogg"
+dest_files=[ "res://.import/Clarx-HAY-NCS-Release.ogg-6953d6948ec8ed3372afe9ded85642db.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
