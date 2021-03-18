@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://estadisticas/Estadisticas.tscn" type="PackedScene" id=1]
 [ext_resource path="res://recursosExternos/IniyaDisplay.otf" type="DynamicFontData" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Menu/Menu.gd" type="Script" id=6]
 [ext_resource path="res://recursosInternos/Environment/Environment.tres" type="Environment" id=7]
 [ext_resource path="res://jugador/circulo.png" type="Texture" id=8]
+[ext_resource path="res://opciones/Opciones.tscn" type="PackedScene" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 44
@@ -20,12 +21,12 @@ font_data = ExtResource( 2 )
 [sub_resource type="Theme" id=2]
 default_font = SubResource( 1 )
 
-[sub_resource type="Gradient" id=4]
+[sub_resource type="Gradient" id=3]
 offsets = PoolRealArray( 0, 0.554839, 1 )
 colors = PoolColorArray( 0.953125, 0.732209, 0.145203, 1, 0.890625, 0.346949, 0.0521851, 1, 0.796875, 0.0435791, 0.0435791, 1 )
 
-[sub_resource type="GradientTexture" id=3]
-gradient = SubResource( 4 )
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
 
 [sub_resource type="Curve" id=5]
 _data = [ Vector2( 0.0114943, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.994253, 0 ), 0.0, 0.0, 0, 0 ]
@@ -59,7 +60,7 @@ margin_left = -692.0
 margin_top = -408.0
 margin_right = 700.0
 margin_bottom = 408.0
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -239,12 +240,16 @@ stretch_mode = 4
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = -10.0
+volume_db = -8.0
 autoplay = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 7 )
+
+[node name="Opciones" parent="." instance=ExtResource( 9 )]
+musica1 = NodePath("../BackgroundMusic")
 [connection signal="button_down" from="Contenedor/Jugar" to="." method="_on_Jugar_button_down"]
 [connection signal="button_down" from="Contenedor/Detalles" to="." method="_on_Detalles_button_down"]
+[connection signal="button_down" from="Contenedor/Opciones" to="." method="_on_Opciones_button_down"]
 [connection signal="button_down" from="Contenedor/Estadisticas" to="." method="_on_Estadisticas_button_down"]
 [connection signal="button_down" from="Contenedor/Quitar" to="." method="_on_Quitar_button_down"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://recursosInternos/Themes/letra.tres" type="Theme" id=1]
 [ext_resource path="res://pausa/Pausa.gd" type="Script" id=2]
+[ext_resource path="res://opciones/Opciones.tscn" type="PackedScene" id=3]
 
 [node name="Pausa" type="CanvasLayer"]
 pause_mode = 2
@@ -9,6 +10,7 @@ script = ExtResource( 2 )
 
 [node name="Control" type="Control" parent="."]
 visible = false
+modulate = Color( 1.2, 1.2, 1.2, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -63,6 +65,8 @@ margin_top = 212.0
 margin_right = 280.0
 margin_bottom = 261.0
 text = "Quit Game"
+
+[node name="Opciones" parent="." instance=ExtResource( 3 )]
 [connection signal="button_down" from="Control/Contenedor/Continuar" to="." method="_on_Continuar_button_down"]
 [connection signal="button_down" from="Control/Contenedor/Reinicar" to="." method="_on_Reinicar_button_down"]
 [connection signal="button_down" from="Control/Contenedor/Opciones" to="." method="_on_Opciones_button_down"]

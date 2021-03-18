@@ -10,7 +10,7 @@ func _on_Reinicar_button_down() -> void:
 
 
 func _on_Opciones_button_down() -> void:
-	pass # Replace with function body.
+	$Opciones.popup()
 
 
 func _on_Menu_button_down() -> void:

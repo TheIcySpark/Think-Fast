@@ -10,6 +10,7 @@ script = ExtResource( 2 )
 
 [node name="UI" type="Control" parent="."]
 visible = false
+modulate = Color( 1.2, 1.2, 1.2, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

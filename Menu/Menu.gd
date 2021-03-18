@@ -26,3 +26,7 @@ func _on_Quitar_button_down() -> void:
 
 func _on_Estadisticas_button_down() -> void:
 	$EstadisticasPopup.popup()
+
+
+func _on_Opciones_button_down() -> void:
+	$Opciones.popup()
