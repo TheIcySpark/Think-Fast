@@ -248,8 +248,21 @@ environment = ExtResource( 7 )
 
 [node name="Opciones" parent="." instance=ExtResource( 9 )]
 musica1 = NodePath("../BackgroundMusic")
+
+[node name="CreditosPopup" type="AcceptDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -325.0
+margin_top = -58.0
+margin_right = 325.0
+margin_bottom = 58.0
+window_title = ""
+dialog_text = "Game Developed by: Theicyspark"
 [connection signal="button_down" from="Contenedor/Jugar" to="." method="_on_Jugar_button_down"]
 [connection signal="button_down" from="Contenedor/Detalles" to="." method="_on_Detalles_button_down"]
 [connection signal="button_down" from="Contenedor/Opciones" to="." method="_on_Opciones_button_down"]
 [connection signal="button_down" from="Contenedor/Estadisticas" to="." method="_on_Estadisticas_button_down"]
+[connection signal="button_down" from="Contenedor/Creditos" to="." method="_on_Creditos_button_down"]
 [connection signal="button_down" from="Contenedor/Quitar" to="." method="_on_Quitar_button_down"]
