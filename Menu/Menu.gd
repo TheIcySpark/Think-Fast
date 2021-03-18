@@ -1,7 +1,6 @@
 extends Control
 
 onready var estadisticas = $Estadisticas
-export var escenaJuego: String
 
 
 func _ready() -> void:
@@ -14,7 +13,7 @@ func _ready() -> void:
 
 
 func _on_Jugar_button_down() -> void:
-	get_tree().change_scene(escenaJuego)
+	get_tree().change_scene("res://juego/Juego.tscn")
 
 
 func _on_Detalles_button_down() -> void:

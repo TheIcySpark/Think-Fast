@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://recursosInternos/Themes/letra.tres" type="Theme" id=1]
 [ext_resource path="res://gameOver/GameOver.gd" type="Script" id=2]
+[ext_resource path="res://musica/Sub-Urban-Cradles-NCS-Release.ogg" type="AudioStream" id=3]
 
 [node name="GameOver" type="CanvasLayer"]
 pause_mode = 2
@@ -57,6 +58,10 @@ text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -12.0
 [connection signal="button_down" from="UI/Contenedor/Reintentar" to="." method="_on_Reintentar_button_down"]
 [connection signal="button_down" from="UI/Contenedor/Menu" to="." method="_on_Menu_button_down"]
 [connection signal="button_down" from="UI/Contenedor/Quitar" to="." method="_on_Quitar_button_down"]

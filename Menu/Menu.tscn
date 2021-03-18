@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://estadisticas/Estadisticas.tscn" type="PackedScene" id=1]
 [ext_resource path="res://recursosExternos/IniyaDisplay.otf" type="DynamicFontData" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://wildJamRecursos/theme.png" type="Texture" id=4]
 [ext_resource path="res://wildJamRecursos/wilcard2.png" type="Texture" id=5]
 [ext_resource path="res://Menu/Menu.gd" type="Script" id=6]
+[ext_resource path="res://recursosInternos/Environment/Environment.tres" type="Environment" id=7]
+[ext_resource path="res://jugador/circulo.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 44
@@ -18,7 +20,21 @@ font_data = ExtResource( 2 )
 [sub_resource type="Theme" id=2]
 default_font = SubResource( 1 )
 
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.554839, 1 )
+colors = PoolColorArray( 0.953125, 0.732209, 0.145203, 1, 0.890625, 0.346949, 0.0521851, 1, 0.796875, 0.0435791, 0.0435791, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 4 )
+
+[sub_resource type="Curve" id=5]
+_data = [ Vector2( 0.0114943, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.994253, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=6]
+colors = PoolColorArray( 1, 0.700195, 0, 1, 1, 0, 0, 1 )
+
 [node name="Menu" type="Control"]
+modulate = Color( 1.2, 1.2, 1.2, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -32,6 +48,35 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color( 0.8, 0.8, 0.8, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -692.0
+margin_top = -408.0
+margin_right = 700.0
+margin_bottom = 408.0
+texture = SubResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particulas" type="CPUParticles2D" parent="."]
+modulate = Color( 1.1, 1.1, 1.1, 1 )
+position = Vector2( 672, 408 )
+amount = 13
+lifetime = 5.0
+texture = ExtResource( 8 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+gravity = Vector2( 0, 0 )
+radial_accel = 61.3
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
 
 [node name="Contenedor" type="VBoxContainer" parent="."]
 anchor_left = 0.5
@@ -196,6 +241,9 @@ stretch_mode = 4
 stream = ExtResource( 3 )
 volume_db = -10.0
 autoplay = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 7 )
 [connection signal="button_down" from="Contenedor/Jugar" to="." method="_on_Jugar_button_down"]
 [connection signal="button_down" from="Contenedor/Detalles" to="." method="_on_Detalles_button_down"]
 [connection signal="button_down" from="Contenedor/Estadisticas" to="." method="_on_Estadisticas_button_down"]
