@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Obstaculos/patrones/PatronObstaculos4.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Obstaculos/Pared.tscn" type="PackedScene" id=2]
+
+[node name="PatronObstaculos10_4" instance=ExtResource( 1 )]
+
+[node name="Pared42" parent="Paredes" index="40"]
+position = Vector2( 1200, 144 )
+
+[node name="Pared43" parent="Paredes" index="41"]
+position = Vector2( 1200, 240 )
+
+[node name="Pared44" parent="Paredes" index="42"]
+position = Vector2( 1200, 336 )
+
+[node name="Pared45" parent="Paredes" index="43"]
+position = Vector2( 1200, 432 )
+
+[node name="Pared46" parent="Paredes" index="44"]
+position = Vector2( 1200, 528 )
+
+[node name="Pared47" parent="Paredes" index="45"]
+position = Vector2( 1200, 48 )
+
+[node name="Pared55" parent="Paredes" index="54" instance=ExtResource( 2 )]
+position = Vector2( 1200, 624 )

@@ -4,6 +4,14 @@ export var patron2: PackedScene
 export var patron3: PackedScene
 export var patron4: PackedScene
 export var patron5: PackedScene
+export var patron6: PackedScene
+export var patron7: PackedScene
+export var patron8: PackedScene
+export var patron9: PackedScene
+export var patron10: PackedScene
+export var patron11: PackedScene
+export var patron12: PackedScene
+export var patron13: PackedScene
 export var velocidad: int
 
 
@@ -57,6 +65,22 @@ func instanciar_escenas() -> void:
 	patrones.append(patron4.instance())
 	add_child(patrones.back())
 	patrones.append(patron5.instance())
+	add_child(patrones.back())
+	patrones.append(patron6.instance())
+	add_child(patrones.back())
+	patrones.append(patron7.instance())
+	add_child(patrones.back())
+	patrones.append(patron8.instance())
+	add_child(patrones.back())
+	patrones.append(patron9.instance())
+	add_child(patrones.back())
+	patrones.append(patron10.instance())
+	add_child(patrones.back())
+	patrones.append(patron11.instance())
+	add_child(patrones.back())
+	patrones.append(patron12.instance())
+	add_child(patrones.back())
+	patrones.append(patron13.instance())
 	add_child(patrones.back())
 
 

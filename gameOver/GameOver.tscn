@@ -9,7 +9,8 @@ pause_mode = 2
 script = ExtResource( 2 )
 
 [node name="UI" type="Control" parent="."]
-modulate = Color( 1.2, 1.2, 1.2, 1 )
+visible = false
+modulate = Color( 1.4, 1.4, 1.4, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

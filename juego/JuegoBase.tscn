@@ -63,6 +63,8 @@ shape = SubResource( 2 )
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 5 )
 
+[node name="GameOver" parent="." instance=ExtResource( 12 )]
+
 [node name="Input" parent="." instance=ExtResource( 3 )]
 
 [node name="Opciones" parent="Input/Pausa" index="1"]
@@ -84,8 +86,6 @@ autoplay = true
 pause_mode = 2
 stream = ExtResource( 10 )
 volume_db = -6.0
-
-[node name="GameOver" parent="." instance=ExtResource( 12 )]
 [connection signal="screen_exited" from="Jugador/Visibilidad" to="." method="_on_Visibilidad_screen_exited"]
 [connection signal="timeout" from="GeneradorObstaculos/Timer" to="Score" method="_on_Timer_timeout"]
 

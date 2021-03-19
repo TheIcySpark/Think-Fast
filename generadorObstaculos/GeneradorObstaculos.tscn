@@ -1,11 +1,19 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://generadorObstaculos/generadorObstaculos.gd" type="Script" id=1]
 [ext_resource path="res://Obstaculos/patrones/PatronObstaculos1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Obstaculos/patrones/patronObstaculos2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Obstaculos/patrones/PatronObstaculos3.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Obstaculos/patrones/PatronesObstaculos4.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Obstaculos/patrones/PatronesObstaculos5.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Obstaculos/patrones/PatronObstaculos4.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Obstaculos/patrones/PatronObstaculos5.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Obstaculos/patrones/PatronObstaculos6_1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Obstaculos/patrones/patronObstaculos7_2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Obstaculos/patrones/PatronObstaculos8_3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Obstaculos/patrones/PatronObstaculos9_4.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Obstaculos/patrones/PatronObstaculos10_4.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Obstaculos/patrones/PatronObstaculos11_5.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Obstaculos/patrones/PatronObstaculos12.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Obstaculos/patrones/PatronObstaculos13_12.tscn" type="PackedScene" id=14]
 
 [node name="GeneradorObstaculos" type="Node"]
 script = ExtResource( 1 )
@@ -14,6 +22,14 @@ patron2 = ExtResource( 3 )
 patron3 = ExtResource( 4 )
 patron4 = ExtResource( 5 )
 patron5 = ExtResource( 6 )
+patron6 = ExtResource( 7 )
+patron7 = ExtResource( 8 )
+patron8 = ExtResource( 9 )
+patron9 = ExtResource( 10 )
+patron10 = ExtResource( 11 )
+patron11 = ExtResource( 12 )
+patron12 = ExtResource( 13 )
+patron13 = ExtResource( 14 )
 velocidad = 250
 
 [node name="Timer" type="Timer" parent="."]
