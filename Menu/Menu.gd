@@ -34,3 +34,7 @@ func _on_Opciones_button_down() -> void:
 
 func _on_Creditos_button_down() -> void:
 	$CreditosPopup.popup()
+
+
+func _on_ComoJugar_button_down() -> void:
+	$ComoJugarPopup.popup()

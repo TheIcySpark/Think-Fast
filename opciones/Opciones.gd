@@ -1,6 +1,7 @@
 extends AcceptDialog
 export var musica1: NodePath
 export var musica2: NodePath
+export var musica3: NodePath
 export var sonidos: NodePath
 
 
@@ -17,6 +18,8 @@ func actualizar_volumen_musica() -> void:
 		get_node(musica1).set_volume_db($Volumen.datos["volumen_musica"])
 	if musica2 != "":
 		get_node(musica2).set_volume_db($Volumen.datos["volumen_musica"])
+	if musica3 != "":
+		get_node(musica3).set_volume_db($Volumen.datos["volumen_musica"])
 
 
 func actualizar_volumen_sonidos() -> void:

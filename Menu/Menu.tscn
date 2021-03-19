@@ -93,50 +93,56 @@ __meta__ = {
 }
 
 [node name="Jugar" type="Button" parent="Contenedor"]
-margin_right = 222.0
+margin_right = 255.0
 margin_bottom = 49.0
 text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Detalles" type="Button" parent="Contenedor"]
+[node name="ComoJugar" type="Button" parent="Contenedor"]
 margin_top = 53.0
-margin_right = 222.0
+margin_right = 255.0
 margin_bottom = 102.0
+text = "How to Play"
+
+[node name="Detalles" type="Button" parent="Contenedor"]
+margin_top = 106.0
+margin_right = 255.0
+margin_bottom = 155.0
 text = "About"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Opciones" type="Button" parent="Contenedor"]
-margin_top = 106.0
-margin_right = 222.0
-margin_bottom = 155.0
+margin_top = 159.0
+margin_right = 255.0
+margin_bottom = 208.0
 text = "Options"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Estadisticas" type="Button" parent="Contenedor"]
-margin_top = 159.0
-margin_right = 222.0
-margin_bottom = 208.0
+margin_top = 212.0
+margin_right = 255.0
+margin_bottom = 261.0
 text = "statistics"
 
 [node name="Creditos" type="Button" parent="Contenedor"]
-margin_top = 212.0
-margin_right = 222.0
-margin_bottom = 261.0
+margin_top = 265.0
+margin_right = 255.0
+margin_bottom = 314.0
 text = "Credits"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Quitar" type="Button" parent="Contenedor"]
-margin_top = 265.0
-margin_right = 222.0
-margin_bottom = 314.0
+margin_top = 318.0
+margin_right = 255.0
+margin_bottom = 367.0
 text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -260,7 +266,25 @@ margin_right = 325.0
 margin_bottom = 58.0
 window_title = ""
 dialog_text = "Game Developed by: Theicyspark"
+
+[node name="ComoJugarPopup" type="AcceptDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -338.0
+margin_top = -205.0
+margin_right = 338.0
+margin_bottom = 205.0
+window_title = ""
+dialog_text = "How to Play:
+
+awsd to move or arrow keys
+esc or p to pause
+
+Make your own record"
 [connection signal="button_down" from="Contenedor/Jugar" to="." method="_on_Jugar_button_down"]
+[connection signal="button_down" from="Contenedor/ComoJugar" to="." method="_on_ComoJugar_button_down"]
 [connection signal="button_down" from="Contenedor/Detalles" to="." method="_on_Detalles_button_down"]
 [connection signal="button_down" from="Contenedor/Opciones" to="." method="_on_Opciones_button_down"]
 [connection signal="button_down" from="Contenedor/Estadisticas" to="." method="_on_Estadisticas_button_down"]
