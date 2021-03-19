@@ -1,26 +1,19 @@
 extends Node
-export var patron1: PackedScene
-export var patron2: PackedScene
-export var patron3: PackedScene
-export var patron4: PackedScene
-export var patron5: PackedScene
-export var patron6: PackedScene
-export var patron7: PackedScene
-export var patron8: PackedScene
-export var patron9: PackedScene
-export var patron10: PackedScene
-export var patron11: PackedScene
-export var patron12: PackedScene
-export var patron13: PackedScene
+
+export var patrones_disponibles: Array
+export var power_ups_disponibles: Array
 export var velocidad: int
 
-
 var patrones: Array
+var power_ups: Array
 var patron_activo_a: int = -1
 var patron_activo_b: int = -1
+var power_up_disponible = false
+
 
 func _ready() -> void:
 	instanciar_escenas()
+	cargar_power_ups()
 	randomize()
 	activar_patron_obstaculos(obtener_patron_aleatorio())
 
@@ -47,6 +40,18 @@ func activar_patron_obstaculos(indice: int) -> void:
 		patrones[patron_activo_b].velocidad = velocidad
 		patrones[patron_activo_b].set_global_position(
 				patrones[patron_activo_a].get_node("posicionSiguiente").get_global_position())
+		activar_power_up()
+
+
+func activar_power_up() -> void:
+	if !power_up_disponible: return
+	var probabilidad: int = randi() % 100
+	if probabilidad > 25:
+		var indice: int = randi() % power_ups.size()
+		patrones[patron_activo_b].get_node("PosicionPowerUp").add_child(power_ups[indice])
+		power_ups[indice] = power_ups_disponibles[indice].instance()
+		power_up_disponible = false
+		$TiempoSiguientePowerUp.start(10)
 
 
 func obtener_patron_aleatorio() -> int:
@@ -55,33 +60,13 @@ func obtener_patron_aleatorio() -> int:
 		indice = randi() % patrones.size()
 	return indice
 
+
 func instanciar_escenas() -> void:
-	patrones.append(patron1.instance())
-	add_child(patrones.back())
-	patrones.append(patron2.instance())
-	add_child(patrones.back())
-	patrones.append(patron3.instance())
-	add_child(patrones.back())
-	patrones.append(patron4.instance())
-	add_child(patrones.back())
-	patrones.append(patron5.instance())
-	add_child(patrones.back())
-	patrones.append(patron6.instance())
-	add_child(patrones.back())
-	patrones.append(patron7.instance())
-	add_child(patrones.back())
-	patrones.append(patron8.instance())
-	add_child(patrones.back())
-	patrones.append(patron9.instance())
-	add_child(patrones.back())
-	patrones.append(patron10.instance())
-	add_child(patrones.back())
-	patrones.append(patron11.instance())
-	add_child(patrones.back())
-	patrones.append(patron12.instance())
-	add_child(patrones.back())
-	patrones.append(patron13.instance())
-	add_child(patrones.back())
+	var i = 0
+	while i < patrones_disponibles.size():
+		patrones.append(patrones_disponibles[i].instance())
+		add_child(patrones.back())
+		i += 1
 
 
 func _on_Timer_timeout() -> void:
@@ -90,3 +75,14 @@ func _on_Timer_timeout() -> void:
 		patrones[patron_activo_a].velocidad = velocidad
 	if patron_activo_b != -1:
 		patrones[patron_activo_b].velocidad = velocidad
+
+
+func cargar_power_ups() -> void:
+	var i = 0
+	while i < power_ups_disponibles.size():
+		power_ups.append(power_ups_disponibles[i].instance())
+		i += 1
+
+
+func _on_TiempoSiguientePowerUp_timeout() -> void:
+	power_up_disponible = true

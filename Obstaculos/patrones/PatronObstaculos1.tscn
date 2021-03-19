@@ -127,3 +127,6 @@ position = Vector2( 912, 240 )
 
 [node name="posicionSiguiente" parent="." index="1"]
 position = Vector2( 1536, 0 )
+
+[node name="PosicionPowerUp" parent="." index="2"]
+position = Vector2( 720, 624 )

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://powerUp/PowerUpBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://powerUp/PowerUps/PowerUpRelentizar.gd" type="Script" id=2]
+
+[node name="PowerUpRelentizar" instance=ExtResource( 1 )]
+modulate = Color( 0.65, 1.27, 0.51, 1 )
+collision_layer = 4
+collision_mask = 2147483649
+script = ExtResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_PowerUpRelentizar_body_entered"]

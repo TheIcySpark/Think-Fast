@@ -7,3 +7,6 @@
 
 [node name="Pared41" parent="Paredes" index="40" instance=ExtResource( 2 )]
 position = Vector2( 1296, 48 )
+
+[node name="PosicionPowerUp" parent="." index="2"]
+position = Vector2( 1104, 432 )

@@ -12,3 +12,5 @@ script = ExtResource( 1 )
 __meta__ = {
 "_gizmo_extents_": 0.0
 }
+
+[node name="PosicionPowerUp" type="Position2D" parent="."]

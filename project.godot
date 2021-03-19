@@ -63,6 +63,7 @@ ui_pausar={
 
 2d_physics/layer_1="jugador"
 2d_physics/layer_2="paredes"
+2d_physics/layer_3="powerUps"
 
 [rendering]
 

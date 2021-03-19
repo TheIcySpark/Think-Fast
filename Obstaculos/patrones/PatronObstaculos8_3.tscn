@@ -9,3 +9,6 @@ position = Vector2( 864, 432 )
 
 [node name="Pared37" parent="Paredes" index="34"]
 position = Vector2( 912, 432 )
+
+[node name="PosicionPowerUp" parent="." index="2"]
+position = Vector2( 912, 624 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://generadorObstaculos/generadorObstaculos.gd" type="Script" id=1]
 [ext_resource path="res://Obstaculos/patrones/PatronObstaculos1.tscn" type="PackedScene" id=2]
@@ -14,25 +14,21 @@
 [ext_resource path="res://Obstaculos/patrones/PatronObstaculos11_5.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Obstaculos/patrones/PatronObstaculos12.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Obstaculos/patrones/PatronObstaculos13_12.tscn" type="PackedScene" id=14]
+[ext_resource path="res://powerUp/PowerUps/PowerUpRelentizar.tscn" type="PackedScene" id=15]
 
 [node name="GeneradorObstaculos" type="Node"]
 script = ExtResource( 1 )
-patron1 = ExtResource( 2 )
-patron2 = ExtResource( 3 )
-patron3 = ExtResource( 4 )
-patron4 = ExtResource( 5 )
-patron5 = ExtResource( 6 )
-patron6 = ExtResource( 7 )
-patron7 = ExtResource( 8 )
-patron8 = ExtResource( 9 )
-patron9 = ExtResource( 10 )
-patron10 = ExtResource( 11 )
-patron11 = ExtResource( 12 )
-patron12 = ExtResource( 13 )
-patron13 = ExtResource( 14 )
+patrones_disponibles = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ]
+power_ups_disponibles = [ ExtResource( 15 ) ]
 velocidad = 250
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="TiempoSiguientePowerUp" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="TiempoSiguientePowerUp" to="." method="_on_TiempoSiguientePowerUp_timeout"]
