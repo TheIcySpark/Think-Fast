@@ -34,4 +34,5 @@ scale_amount_curve = SubResource( 2 )
 color_ramp = SubResource( 3 )
 
 [node name="Visibilidad" type="VisibilityNotifier2D" parent="."]
+[connection signal="body_entered" from="." to="." method="_on_PowerUpBase_body_entered"]
 [connection signal="screen_exited" from="Visibilidad" to="." method="_on_Visibilidad_screen_exited"]
